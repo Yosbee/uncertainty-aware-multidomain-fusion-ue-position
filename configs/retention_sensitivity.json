@@ -1,0 +1,105 @@
+{
+  "analysis_type": "Post-hoc sensitivity analysis on an already inspected test set; not a new blind test or preregistered study",
+  "only_scientific_change": "Core serving-state input only; primary RAN outputs, roles and training/selection recipe unchanged.",
+  "retention_rule": {
+    "floor_mask": "Existing C.2 mask derived from all six original CSV RSS values at simulator floor",
+    "association": "Last earlier non-floor association in the same vehicle retained chronological stream, including observations before the window",
+    "no_prior": "Unknown cell -1, zero cell-derived context",
+    "no_timeout": true,
+    "no_future_backfill": true,
+    "preserved": "Supplied speed and causal speed difference, legacy componentwise direction fill and timer clipping"
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "models": [
+    "fusion_means",
+    "fusion_rvar",
+    "fusion_cvar",
+    "fusion_full"
+  ],
+  "new_training": {
+    "Core_fold_fits": 25,
+    "Core_full_fits": 4,
+    "RAN_fits": 0,
+    "GB_coordinate_fits": 40
+  },
+  "reuse": {
+    "Core_full_seed42": "Existing C.2 hold checkpoint and scaler, frozen before this sensitivity run",
+    "RAN": "Original corresponding-seed OOF, full-training validation and test positions/variances; unchanged",
+    "source_data": "Same source reports, targets, vehicle roles and folds; no additional data"
+  },
+  "split_contract": {
+    "full_fit_vehicles": 18767,
+    "model_selection_vehicles": 2011,
+    "test_vehicles": 4032,
+    "fold_count": 5,
+    "fold_preprocessing": "Held-out fold excluded from scaler fitting and checkpoint selection; original internal development split used",
+    "training_windows": 1256647,
+    "model_selection_windows": 133806,
+    "scored_test_windows": 272201
+  },
+  "neural_recipe": {
+    "architecture": "Exact primary Core15 BiLSTM and position/log-variance heads",
+    "loss": "Exact primary GaussianNLL implementation, coordinate system and clamp",
+    "scaler": "StandardScaler over clean fit windows/time steps, reused in clean and augmented phases",
+    "augmentation": "Primary observation recipe unchanged; Core feature inputs unchanged by radio augmentation",
+    "clean_epochs_max": 40,
+    "clean_patience_epochs": 10,
+    "clean_patience_min_delta": 0.001,
+    "checkpoint_rule": "All strict validation-NLL improvements eligible; clean-validation NLL for clean phase",
+    "augmented_epochs": 5,
+    "optimizer_and_schedule": "Exact primary AdamW, learning rates, cosine schedule, batch size, seeds, shuffling and clipping; source-hash bound"
+  },
+  "gb_rule": {
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 63,
+    "chunk_trees": 100,
+    "patience_chunks": 5,
+    "max_trees": 12000,
+    "early_stopping": false,
+    "warm_start": true,
+    "objective": "Per-coordinate MSE",
+    "selection": "Strict minimum model-selection validation MSE, using full-training domain outputs",
+    "training_inputs": "Original RAN OOF + retention Core OOF; same vehicle/window IDs",
+    "feature_columns": {
+      "fusion_means": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "fusion_rvar": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fusion_cvar": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "fusion_full": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "original_protocol_sha256": "90bbfbb37c1ea017e42939b16792b21ede1bc418354758e82b89f3b5c0d63bf0"
+}

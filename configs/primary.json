@@ -1,0 +1,47 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "reports": 10,
+  "horizon_seconds": 5,
+  "input_time": "exact t-9,...,t",
+  "domain_training": {
+    "loss": "gaussian_nll_mean",
+    "batch_size": 512,
+    "optimizer": "AdamW",
+    "learning_rate_clean": 0.0005,
+    "learning_rate_augmented": 0.0001,
+    "weight_decay": 1e-05,
+    "gradient_clip": 1.0,
+    "clean_max_epochs": 40,
+    "clean_patience": 10,
+    "min_delta": 0.001,
+    "ran_augmented_epochs": 8,
+    "core_augmented_epochs": 5,
+    "minimum_checkpoint_selected": true
+  },
+  "augmentation_seed": 2026100900,
+  "gb": {
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 63,
+    "chunk": 100,
+    "patience": 5,
+    "cap": 12000,
+    "internal_early_stopping": false,
+    "selection": "per-axis model-selection MSE using full-training domain outputs"
+  },
+  "centralized": {
+    "seeds": [
+      42
+    ],
+    "phase": "single augmented",
+    "max_epochs": 40,
+    "loss": "coordinate_mse",
+    "all_features": 44,
+    "without_speed": 42
+  }
+}

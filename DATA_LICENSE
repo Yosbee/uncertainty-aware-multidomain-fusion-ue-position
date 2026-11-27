@@ -1,0 +1,23 @@
+Data scope and attribution
+==========================
+
+The software license in LICENSE does not license external research data.
+This revision contains vehicle-role metadata and aggregate verification tables,
+but not the original mobility trace, prepared report arrays, radio maps,
+per-window prediction archives or trained checkpoints.
+
+The mobility source used in the study is TAPASCologne, credited to Sandesh
+Uppoor, Diala Naboulsi and Marco Fiore:
+http://kolntrace.project.citi-lab.fr/
+
+The study's existing data documentation identifies the mobility-derived data as
+CC BY-NC. This source-code reorganization does not change those terms or grant
+additional redistribution rights. Obtain the original trace from its provider
+and consult the terms accompanying the particular data artifact you use.
+The synthetic radio layer was generated using Sionna RT and scene geometry;
+source-code availability does not imply redistribution of the underlying scene.
+
+Vehicle identifiers in configs/vehicle_roles.json and the aggregate tables are
+study metadata. Any separately released data archive must carry its own source
+attribution, contents manifest and applicable usage terms. No new data-release
+permission or public download location is established by this revision.

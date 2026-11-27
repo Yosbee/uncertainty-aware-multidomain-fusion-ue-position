@@ -1,0 +1,22 @@
+{
+  "primary_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "seed42_reused_variants": [
+    "fusion_full",
+    "fusion_rvar",
+    "ran_speed",
+    "ran_post"
+  ],
+  "initial_tree_cap": 6000,
+  "common_tree_cap": 12000,
+  "selection": "minimum per-axis model-selection coordinate MSE",
+  "continuation": "Already-converged models reused; capped fits continued from selected warm-start snapshots, verifying overlapping logged steps. Fresh fit invocation is not identical historical provenance.",
+  "retention_reuses": "Primary RAN outputs in all seeds, and prior retention full Core seed42.",
+  "centralized": "Two separate seed42 fits; central42 without speed is an earlier comparator; neither is included as a five-seed primary model.",
+  "source_protocol_sha256": "5eef3d20f707d2dff382f5854d05ec4c4befb7e0f933274c91d99a08ff926d8e"
+}

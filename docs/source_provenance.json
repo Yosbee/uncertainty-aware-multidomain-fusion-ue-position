@@ -1,0 +1,358 @@
+[
+  {
+    "released": "src/uefusion/models/base_model.py",
+    "original_file": "base_model.py",
+    "original_sha256": "d55112acec551da1441edfdb2fd7a99a63e1c0545ab78291c6230b80caf4c02d",
+    "symbols": [
+      "BasePositioningModel.__init__"
+    ],
+    "adaptations": "Unused visualization and abstract utility methods removed; initialization unchanged.",
+    "released_sha256": "ecee9e59b61dea29a1e880c86a2790c8636930c893fd1126e1cafa010a408091"
+  },
+  {
+    "released": "src/uefusion/models/randaf_model.py",
+    "original_file": "randaf_model.py",
+    "original_sha256": "1cb16e088fd8772c16f6d0ea6f1e6596d6a6e310e1f5eeb4f466914dba6ee807",
+    "symbols": [
+      "PositionalEncoding",
+      "RANDAFPositioning"
+    ],
+    "adaptations": "Architecture and forward methods retained; standalone imports and descriptive documentation corrected.",
+    "released_sha256": "a0baeb5b16e16a08cb76de0b9bd164aefe8f8ee175afbcbde76655b18b0fe92d"
+  },
+  {
+    "released": "src/uefusion/models/nwdaf_model.py",
+    "original_file": "nwdaf_model.py",
+    "original_sha256": "404b382b6b005cd783773037a7e6cdd80a85c7fa34c1f4034f16768fb1509688",
+    "symbols": [
+      "NWDAFPositioning"
+    ],
+    "adaptations": "Architecture and forward methods retained; standalone imports and descriptive documentation corrected.",
+    "released_sha256": "1acc4189848d083b85f49774af289a756756849e90a31d5dc4d3a78ee16b340d"
+  },
+  {
+    "released": "src/uefusion/models/lstm_model.py",
+    "original_file": "lstm_model.py",
+    "original_sha256": "88f7ebca7907a3d15098ed6f5a7c82b5012486967a02bb906f749567757a3b20",
+    "symbols": [
+      "LSTMPositioning"
+    ],
+    "adaptations": "Architecture and forward methods retained; standalone imports and descriptive documentation corrected.",
+    "released_sha256": "336a0ffa1eba912e112078851903e4f77f6e6d6d0e7a39dd824a07beef09bc77"
+  },
+  {
+    "released": "src/uefusion/models/__init__.py",
+    "original_file": "config.json",
+    "original_sha256": "bdb6e45681a44752ae478388f2252ea807db61c4fd27237013ef36e817835e79",
+    "symbols": [],
+    "adaptations": "Project only model settings used by final runs; remove paths and unused historical branches.",
+    "released_sha256": "335164fc6c6563a3e4af1ef20873429093a987a39ab70395973ca9ab21af18d5"
+  },
+  {
+    "released": "src/uefusion/models/__init__.py",
+    "original_file": "config.json",
+    "original_sha256": "9ad6a891026ff5c7fcd6473cb5588ae6d7f506461b23daea592393e075ad3c23",
+    "symbols": [],
+    "adaptations": "Project only model settings used by final runs; remove paths and unused historical branches.",
+    "released_sha256": "335164fc6c6563a3e4af1ef20873429093a987a39ab70395973ca9ab21af18d5"
+  },
+  {
+    "released": "src/uefusion/models/__init__.py",
+    "original_file": "config.json",
+    "original_sha256": "c605341c5aeaa3e0e9d0fcfe925d607e05286a5ca1e4d54745cc4aacc0bb4c8e",
+    "symbols": [],
+    "adaptations": "Project only model settings used by final runs; remove paths and unused historical branches.",
+    "released_sha256": "335164fc6c6563a3e4af1ef20873429093a987a39ab70395973ca9ab21af18d5"
+  },
+  {
+    "released": "src/uefusion/observations.py",
+    "original_file": "observation_contract.py",
+    "original_sha256": "ab59b2c495d50da2d86234b0f029a7dce329b631a15b9516f90a103909d92fed",
+    "symbols": [
+      "vehicle_keys",
+      "mix64",
+      "uniform",
+      "normal",
+      "regenerate_radio"
+    ],
+    "adaptations": "Extract only primary radio primitives; coordinate-derived observation branches excluded.",
+    "released_sha256": "5347f0cc8d2a7798c9f9e2bb6b344e347adab1be933b5dfa1a536c979d168678"
+  },
+  {
+    "released": "src/uefusion/cell_state.py",
+    "original_file": "common.py",
+    "original_sha256": "4d23cad78e9e4f2ba3627eafb390e36e7c045b511a632b7f6dccc08d10c64f4e",
+    "symbols": [
+      "derive",
+      "hold_cells"
+    ],
+    "adaptations": "Path and cache loaders excluded; scientific derivations retained verbatim.",
+    "released_sha256": "bd2057024f45de4b9934b10a752a5eba609b3768a5fba0a757c3a19c1dae1c61"
+  },
+  {
+    "released": "src/uefusion/training_loop.py",
+    "original_file": "train_restored.py",
+    "original_sha256": "fc71ff2eb61a7a1df2b9757cb8779a91abd3b82d3e501da099372c936de9ebaf",
+    "symbols": [
+      "score",
+      "fit_phase"
+    ],
+    "adaptations": "Retain loss, optimizer, scheduler and stopping logic; permit CPU checkpoint RNG storage.",
+    "released_sha256": "ad8963489f66365a60a58e3e41837c4c1e7f60ac8ad3c35b727801ca8075e504"
+  },
+  {
+    "released": "src/uefusion/training_loop.py",
+    "original_file": "train_matched_velocity.py",
+    "original_sha256": "ec92b20caa2d6c7d601d4729de3c3aef4e9261fa20f3401737ba78386157a302",
+    "symbols": [
+      "score",
+      "fit_phase"
+    ],
+    "adaptations": "Retain loss, optimizer, scheduler and stopping logic; permit CPU checkpoint RNG storage.",
+    "released_sha256": "ad8963489f66365a60a58e3e41837c4c1e7f60ac8ad3c35b727801ca8075e504"
+  },
+  {
+    "released": "src/uefusion/boosting.py",
+    "original_file": "fit.py",
+    "original_sha256": "2593f31a71b53083c702e51ac0b270974388e6744b52d31c2ff4ca434eabe8f2",
+    "symbols": [
+      "fit_axis"
+    ],
+    "adaptations": "Inject recorded budget instead of filesystem-global protocol; fitting and reuse/extension logic unchanged.",
+    "released_sha256": "7152b87ec76aaeb118dc2fbf4965c32d07ca6a2589f542dbab2512d80b4f361e"
+  },
+  {
+    "released": "src/uefusion/fusion.py",
+    "original_file": "common.py",
+    "original_sha256": "310ce7eb8cdf616781732b09029edb431ddc05524efa0c5222f0df99cb3a41ce",
+    "symbols": [
+      "MODELS",
+      "COLS",
+      "CORE_COLS",
+      "features"
+    ],
+    "adaptations": "Only feature selection and names retained; no workspace-dependent loaders.",
+    "released_sha256": "1a31f43a9cdb41ae7c371cad2928c285b63859c390b64675f255dd55c987a6f2"
+  },
+  {
+    "released": "src/uefusion/speed.py",
+    "original_file": "stream.py",
+    "original_sha256": "2180bafcfbca78e75f0eaf97d0fcdbd5a861068f4c1c8aa31fea017414e94daf",
+    "symbols": [
+      "generate"
+    ],
+    "adaptations": "Remove historical path imports; keyed noise and precision-corrected report differences unchanged.",
+    "released_sha256": "28433b9bf6194de407dd0bd2625d1ea136e6ec3e1ed559affe40548f403c4bef"
+  },
+  {
+    "released": "configs/vehicle_roles.json",
+    "original_file": "F1_SPLITS.json",
+    "original_sha256": "a508114982c3ea2a5b3f9ec4b703d83209e1cf13610b9d6642c0302132e7d173",
+    "symbols": [],
+    "adaptations": "Project exact fit/development/heldout/test IDs; omit unrelated calibration roles and historical commentary.",
+    "released_sha256": "11300432790dacb69037395b06e96935fffa6e1d4726d2f1b7bab6acd497b033"
+  },
+  {
+    "released": "configs/primary.json",
+    "original_file": "train_restored.py",
+    "original_sha256": "fc71ff2eb61a7a1df2b9757cb8779a91abd3b82d3e501da099372c936de9ebaf",
+    "symbols": [],
+    "adaptations": "Explicit scientific settings; path and process metadata omitted.",
+    "released_sha256": "e7405224bccb5f557a193442a6a388388f8a5229500525c651ec825a3b62c397"
+  },
+  {
+    "released": "configs/primary.json",
+    "original_file": "FROZEN.json",
+    "original_sha256": "5eef3d20f707d2dff382f5854d05ec4c4befb7e0f933274c91d99a08ff926d8e",
+    "symbols": [],
+    "adaptations": "Explicit scientific settings; path and process metadata omitted.",
+    "released_sha256": "e7405224bccb5f557a193442a6a388388f8a5229500525c651ec825a3b62c397"
+  },
+  {
+    "released": "configs/speed_sensitivity.json",
+    "original_file": "stream.py",
+    "original_sha256": "2180bafcfbca78e75f0eaf97d0fcdbd5a861068f4c1c8aa31fea017414e94daf",
+    "symbols": [],
+    "adaptations": "Expose supplied-speed conditions separately; no implicit execution.",
+    "released_sha256": "90b686b56dd52794e489fdbbddcdd88cd1dcd6d71d2334b02d1c1ab4a7fbde5a"
+  },
+  {
+    "released": "configs/speed_sensitivity.json",
+    "original_file": "common.py",
+    "original_sha256": "c50cd9651f7310070e3c97d3eaa440aac4f894ace140eb13527f20452f72c612",
+    "symbols": [],
+    "adaptations": "Expose supplied-speed conditions separately; no implicit execution.",
+    "released_sha256": "90b686b56dd52794e489fdbbddcdd88cd1dcd6d71d2334b02d1c1ab4a7fbde5a"
+  },
+  {
+    "released": "src/uefusion/feature_engineering.py",
+    "original_file": "prepare_dataset.py",
+    "original_sha256": "9b46c61cf1117ab83d265fd9ddff4c3463007bd30f7d6deafb206d7aefd82529",
+    "symbols": [
+      "filter_step_0a",
+      "compute_vehicle_stats",
+      "filter_step_0b",
+      "add_derived_features"
+    ],
+    "adaptations": "Remove unused observed-coordinate velocity derivations and coordinate summary statistics; primary row/vehicle filters and all 44 feature derivations retained. Retain fixed vehicle roles rather than redrawing splits.",
+    "released_sha256": "126f702a12e5f6b4e5c671d1da115b353ba641a4aae60e7ea0c1553b6fc3d728"
+  },
+  {
+    "released": "src/uefusion/data.py",
+    "original_file": "prepare_observation_cache.py",
+    "original_sha256": "7c2586896ae384a8798bfbc261a5678e0c51f458561bed5856c74c3b05d088fc",
+    "symbols": [],
+    "adaptations": "Portable data schema and explicit paths; exact-time windows, report-key augmentation, fitting-only imputation and window-weighted scaling contracts retained.",
+    "released_sha256": "9b8d24341e78d283f9626856e5b25b7b890542a022be1107eb6218c661eebf34"
+  },
+  {
+    "released": "src/uefusion/data.py",
+    "original_file": "restoration_data.py",
+    "original_sha256": "4118d54aeac5f1a3acad510a4f12881c4c6cea387cd04988ac0071f7fca09cc3",
+    "symbols": [],
+    "adaptations": "Portable data schema and explicit paths; exact-time windows, report-key augmentation, fitting-only imputation and window-weighted scaling contracts retained.",
+    "released_sha256": "9b8d24341e78d283f9626856e5b25b7b890542a022be1107eb6218c661eebf34"
+  },
+  {
+    "released": "src/uefusion/data.py",
+    "original_file": "prepare_all_opportunities.py",
+    "original_sha256": "db7739002acc3af618fc6019042d0fa4831b21fdc20f22f348103096124070bd",
+    "symbols": [],
+    "adaptations": "Portable data schema and explicit paths; exact-time windows, report-key augmentation, fitting-only imputation and window-weighted scaling contracts retained.",
+    "released_sha256": "9b8d24341e78d283f9626856e5b25b7b890542a022be1107eb6218c661eebf34"
+  },
+  {
+    "released": "src/uefusion/data.py",
+    "original_file": "audit_raw_time.py",
+    "original_sha256": "6e6284e946be02ca0267b6fe6324581a1c3e7e9bf5d68287efd0d7fd4d83c5d7",
+    "symbols": [],
+    "adaptations": "Portable data schema and explicit paths; exact-time windows, report-key augmentation, fitting-only imputation and window-weighted scaling contracts retained.",
+    "released_sha256": "9b8d24341e78d283f9626856e5b25b7b890542a022be1107eb6218c661eebf34"
+  },
+  {
+    "released": "src/uefusion/train.py",
+    "original_file": "train_restored.py",
+    "original_sha256": "fc71ff2eb61a7a1df2b9757cb8779a91abd3b82d3e501da099372c936de9ebaf",
+    "symbols": [],
+    "adaptations": "Portable orchestration around extracted scientific loop; project only current primary and centralized models.",
+    "released_sha256": "c09da3523703ba056b9575524fa71e5d352d184ae30d9be0bb405ace0ff98156"
+  },
+  {
+    "released": "src/uefusion/train.py",
+    "original_file": "study.py",
+    "original_sha256": "12f17ca96a648158f3e912f71c85dc6ea9fe4ca071bffc2494b29d6d5e612a29",
+    "symbols": [],
+    "adaptations": "Portable orchestration around extracted scientific loop; project only current primary and centralized models.",
+    "released_sha256": "c09da3523703ba056b9575524fa71e5d352d184ae30d9be0bb405ace0ff98156"
+  },
+  {
+    "released": "src/uefusion/train.py",
+    "original_file": "train_pilot.py",
+    "original_sha256": "8b73d14f2ca91eeb4e0548a92a613dea0201af71ba06309ad67d18484ab05fda",
+    "symbols": [],
+    "adaptations": "Portable orchestration around extracted scientific loop; project only current primary and centralized models.",
+    "released_sha256": "c09da3523703ba056b9575524fa71e5d352d184ae30d9be0bb405ace0ff98156"
+  },
+  {
+    "released": "src/uefusion/inference.py",
+    "original_file": "infer_training_meta.py",
+    "original_sha256": "9876eb5f954c3100f83f2280b89a042aa0eeb999122ef4bb5eb176801554e06a",
+    "symbols": [],
+    "adaptations": "Portable identity-based checkpoint inference and OOF assembly; explicit requested files, role checks and no automatic scoring.",
+    "released_sha256": "82433ba91d6b2a66a6a8dfb4c602face7ffb92a33d4062c06e078eaf7d381572"
+  },
+  {
+    "released": "src/uefusion/inference.py",
+    "original_file": "assemble_oof.py",
+    "original_sha256": "df1085319904840b58daf068f605ef2d327f721c725eed99bab64420eb54deb3",
+    "symbols": [],
+    "adaptations": "Portable identity-based checkpoint inference and OOF assembly; explicit requested files, role checks and no automatic scoring.",
+    "released_sha256": "82433ba91d6b2a66a6a8dfb4c602face7ffb92a33d4062c06e078eaf7d381572"
+  },
+  {
+    "released": "src/uefusion/cli.py",
+    "original_file": "prepare.py",
+    "original_sha256": "032029519f7d3ff293f705f38a9a667a62cdca58887ebc7326120a12168ae2e5",
+    "symbols": [],
+    "adaptations": "New CLI adapter retaining augmented OOF/full-training-selection distinction and exact feature contracts.",
+    "released_sha256": "9842eb1dcd1b4bd00cf64ae3ec7365f1f03df5f634fc7e154b8a405565e786f1"
+  },
+  {
+    "released": "src/uefusion/cli.py",
+    "original_file": "fit.py",
+    "original_sha256": "2593f31a71b53083c702e51ac0b270974388e6744b52d31c2ff4ca434eabe8f2",
+    "symbols": [],
+    "adaptations": "New CLI adapter retaining augmented OOF/full-training-selection distinction and exact feature contracts.",
+    "released_sha256": "9842eb1dcd1b4bd00cf64ae3ec7365f1f03df5f634fc7e154b8a405565e786f1"
+  },
+  {
+    "released": "configs/vehicle_roles.json",
+    "original_file": "vehicle_splits.json",
+    "original_sha256": "3fa472428ddc3283f9d3f11e002886e45e176fa5e49edb2cadc12f66dca88979",
+    "symbols": [],
+    "adaptations": "Add exact original train/validation/test source splits; demonstration test assignments unchanged.",
+    "released_sha256": "11300432790dacb69037395b06e96935fffa6e1d4726d2f1b7bab6acd497b033"
+  },
+  {
+    "released": "configs/retention_sensitivity.json",
+    "original_file": "PROTOCOL.json",
+    "original_sha256": "90bbfbb37c1ea017e42939b16792b21ede1bc418354758e82b89f3b5c0d63bf0",
+    "symbols": [],
+    "adaptations": "Sanitized scientific settings and original protocol hash; no workspace data path or execution authorization prose.",
+    "released_sha256": "a1ebf2e6349851503f7d15979b06e505e198e359bfbce1e5161813744e669080"
+  },
+  {
+    "released": "configs/fitting_history.json",
+    "original_file": "FROZEN.json",
+    "original_sha256": "5eef3d20f707d2dff382f5854d05ec4c4befb7e0f933274c91d99a08ff926d8e",
+    "symbols": [],
+    "adaptations": "Record actual seed42 reuse/extension, primary budget and comparator scope without old path names.",
+    "released_sha256": "8a12059a3cb3def4afd9769fc15dbf8ef54475d93c0402ddd797dadd49d72685"
+  },
+  {
+    "released": "src/uefusion/cell_state.py",
+    "original_file": "prepare.py",
+    "original_sha256": "f2e5655a6a926fc203e1677dd2b0b76b77249e216e298b6dd4c3bcbffb9f0fdb",
+    "symbols": [
+      "retention_core"
+    ],
+    "adaptations": "New portable adapter around preserved derive/hold_cells, with baseline-parity guard.",
+    "released_sha256": "bd2057024f45de4b9934b10a752a5eba609b3768a5fba0a757c3a19c1dae1c61"
+  },
+  {
+    "released": "src/uefusion/speed.py",
+    "original_file": "stream.py",
+    "original_sha256": "0be7d86a4f973651e8c42c527a3779524d153108e5dfb9d0ec0f15740196398b",
+    "symbols": [
+      "source_map"
+    ],
+    "adaptations": "Portable source-map adapter with input validation; causal latest-source rule retained.",
+    "released_sha256": "28433b9bf6194de407dd0bd2625d1ea136e6ec3e1ed559affe40548f403c4bef"
+  },
+  {
+    "released": "src/uefusion/speed.py",
+    "original_file": "SOURCE_TIME_COHORT_AMENDMENT.json",
+    "original_sha256": "75db858408733b56d83c607ff6568b3724e22ea87f730eb7f5ee19e229a07470",
+    "symbols": [
+      "common_exact_cohort"
+    ],
+    "adaptations": "Executable availability-only adapter; verified against saved exact-lag opportunity IDs.",
+    "released_sha256": "28433b9bf6194de407dd0bd2625d1ea136e6ec3e1ed559affe40548f403c4bef"
+  },
+  {
+    "released": "docs/METHODS.md",
+    "original_file": "train_restored.py",
+    "original_sha256": "fc71ff2eb61a7a1df2b9757cb8779a91abd3b82d3e501da099372c936de9ebaf",
+    "symbols": [],
+    "adaptations": "Method documentation cross-checked against source and preserved configurations.",
+    "released_sha256": "564d10ace4acd999649cda43da58ae288a43890b514f60c5718d1099f6cf10f5"
+  },
+  {
+    "released": "docs/TRAINING.md",
+    "original_file": "FROZEN.json",
+    "original_sha256": "5eef3d20f707d2dff382f5854d05ec4c4befb7e0f933274c91d99a08ff926d8e",
+    "symbols": [],
+    "adaptations": "Portable workflow documentation; clearly distinguishes code support from unavailable training inputs and historical replay.",
+    "released_sha256": "f4ac9986eb50f271491e2986b603320c1f71edfc9337041839c2bd751741affc"
+  }
+]

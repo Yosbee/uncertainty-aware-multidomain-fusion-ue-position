@@ -1,0 +1,12 @@
+{
+  "title": "Output-Level RAN-Core Cooperation for Future UE Position Prediction",
+  "snapshot_date": "2026-11-25",
+  "manuscript_artifact_sha256": {
+    "source/main.tex": "c53000143dd62e585f61f543adcf1518074f413e677fde42fc032fb8952d988a",
+    "files/main_with_appendix.pdf": "d9190fc40528672e1bd386f97c168259c5aa787384b61425bad653024de67c12",
+    "files/manuscript_source.zip": "09989c384cb925cb1e62f59b1ccbe082ebfa3d22f5329c889143f37d50fca332",
+    "files/reproduction_details.zip": "9f39717eacf06ccbc35f23ac497ef731870f374fb7d00a8487bcdb20ae70de7f",
+    "files/supplementary_methods_and_diagnostics.pdf": "8c2f6ee54b745b262520246cec19bf44aebdb19c468f2759e6e15023ded6bcae"
+  },
+  "notes": "Source alignment and saved-result verification; no new study fits or predictions."
+}

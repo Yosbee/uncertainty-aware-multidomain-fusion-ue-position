@@ -1,0 +1,7 @@
+# Environment used for the portable-code checks; not a claim about every historical fit.
+numpy==1.26.4
+scipy==1.15.3
+pandas==2.2.3
+scikit-learn==1.7.0
+torch==2.2.1
+pytest==8.4.1

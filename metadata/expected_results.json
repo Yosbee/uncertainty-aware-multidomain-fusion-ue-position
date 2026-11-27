@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "expected_numeric_cells": 8485,
+  "absolute_tolerance": 1e-07,
+  "relative_tolerance": 1e-09,
+  "source": "Previously recorded primary, floor, retention and speed aggregate tables; values copied without rounding.",
+  "aggregation": "Compare realization-level metrics, then average within seeds and across five seeds.",
+  "large_speed_cohort": "exact_lag_common, 220918 windows from 4010 vehicles",
+  "limitations": "Bootstrap confidence intervals are separately verified by primary_archive_score.py.",
+  "source_tables": [
+    {
+      "name": "primary_floor/metrics_per_seed.csv",
+      "sha256": "99f6ec22f5782e10752c3b59abdeb26ff7b0ef1c4090102daf5a493afc8b0087",
+      "bytes": 19667
+    },
+    {
+      "name": "primary_variance_factorial/metrics_per_seed.csv",
+      "sha256": "09efd265a78d1757c43ac05f17ac06b1b1f46c3be0fb5eaa2bd8e173f1c537a0",
+      "bytes": 14519
+    },
+    {
+      "name": "retention/metrics_per_seed.csv",
+      "sha256": "49c34363d304389748ff376434f0f9c366ef02e5f3c7c96f1159d2fda80a78e9",
+      "bytes": 32246
+    },
+    {
+      "name": "primary_floor/transitions_50m_per_seed.csv",
+      "sha256": "ee3f3df980d4ee0c86f86595c51df775fa6acab7f51e7e01e8bad328079a241a",
+      "bytes": 20421
+    },
+    {
+      "name": "retention/transitions_50m_per_seed.csv",
+      "sha256": "69a63f3cfe39bd18462aa97bcacde83198b8585f13d62e78e92cc437bfc731ae",
+      "bytes": 34738
+    },
+    {
+      "name": "small_speed/per_realization_metrics.csv",
+      "sha256": "6f154fcee57bf0508fb6bf83efb403645a23576a0c10ef1fcf159dc9bbccea04",
+      "bytes": 489211
+    },
+    {
+      "name": "large_speed_corrected/per_realization_metrics.csv",
+      "sha256": "90d6732bc94cf8f5dd750d5a415cd1400af33c891f533b6e5dc8c9f5a488f8fc",
+      "bytes": 1247741
+    },
+    {
+      "name": "small_speed_floor/mean_per_realization.csv",
+      "sha256": "f9e01f7b7667d8bcb47d1f430023dd44834701550bef2e823d7fe84bfda523fc",
+      "bytes": 16367
+    },
+    {
+      "name": "primary_archive/expected/per_seed_metrics.csv",
+      "sha256": "afb656844ef2825f1123928de28fba47fc5ec12a8e5835c27f0a2eb985634dcc",
+      "bytes": 60880
+    }
+  ]
+}
